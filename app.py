@@ -2,10 +2,13 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import zipfile
+import pickle
 
-# Load trained ML pipeline
-with open("income_prediction.pkl", "rb") as file:
-    model = pickle.load(file)
+with zipfile.ZipFile("income_prediction.zip", "r") as z:
+    with z.open("income_prediction.pkl") as file:
+        model = pickle.load(file)
+
 
 # Page configuration
 st.set_page_config(

@@ -9,7 +9,7 @@ import pickle
 
 with zipfile.ZipFile("income_prediction.zip", "r") as z:
     with z.open("income_prediction.pkl") as f:
-        model = pickle.load(f)
+        model = pickle.load(file)
 
 
 # Page configuration

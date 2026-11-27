@@ -4,10 +4,12 @@ import pandas as pd
 import pickle
 import zipfile
 import pickle
+import zipfile
+import pickle
 
 with zipfile.ZipFile("income_prediction.zip", "r") as z:
-    with z.open("income_prediction.pkl") as file:
-        model = pickle.load(file)
+    with z.open("income_prediction.pkl") as f:
+        model = pickle.load(f)
 
 
 # Page configuration
